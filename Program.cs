@@ -131,7 +131,7 @@ lf_to_crlf filename|directory_name [extension_list]
                 var newFileContent = fileContent.Replace("\n", "\r\n");
                 newFileContent = newFileContent.Replace("\r\r", "\r");
 
-                using (StreamWriter writer = new StreamWriter(path))
+                using (StreamWriter writer = new StreamWriter(path, false, Encoding.UTF8))
                 {
                     writer.Write(newFileContent);
                 }
